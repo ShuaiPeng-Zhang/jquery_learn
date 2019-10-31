@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            // 取出html内容
+            var $htm = $('.link');
+            alert($htm.html());
+
+            // 设置html内容
+            $('.link').html('<span>这是一个百度链接</span>');
+            var $htm1 = $('.link').html();
+            // alert($htm1);
+
+
+            var $a = $('.link');
+            // 取出class属性
+            alert($a.prop('class'));
+            // 设置href属性
+            $a.prop({'href':'http://www.baidu.com','title':'百度网链接'});
+        })
+    </script>
+</head>
+<body>
+    <a href="#" class="link">这是一个链接</a>
+</body>
+</html>

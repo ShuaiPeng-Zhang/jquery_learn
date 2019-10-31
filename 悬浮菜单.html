@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+        }
+        .banner{
+            width: 960px;
+            height: 200px;
+            background: cyan;
+            margin:0 auto;
+        }
+        .menu{
+            width: 960px;
+            height: 80px;
+            background: gold;
+            margin:0 auto;
+            text-align: center;
+            line-height: 80px;
+        }
+        .menu_back{
+            width: 960px;
+            height: 80px;
+            margin: 0 auto;
+            display: none;
+        }
+        p{
+            text-align: center;
+            color: red;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(window).scroll(function () {
+                var iNum = $(document).scrollTop();
+                document.title = iNum;
+
+                var $menu = $('.menu');
+                var $menu_back = $('.menu_back');
+
+                if (iNum>200){
+                    $menu.css({
+                            'position':'fixed',
+                            'left':'50%',
+                            'top':0,
+                            'margin-left':-480
+                        });
+                    $menu_back.show();
+                }
+                //向上翻的时候
+                else {
+                    $menu.css({
+                            //取消定位
+                            'position':'static',
+                            'margin-left':'auto'
+                        });
+                    $menu_back.hide();
+                }
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <div class="banner"></div>
+    <div class="menu">菜单</div>
+    <div class="menu_back"></div>
+
+    <p>文档内容</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>文档内容</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>文档内容</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>文档内容</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>文档内容</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>文档内容</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>文档内容</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>文档内容</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>文档内容</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+</html>

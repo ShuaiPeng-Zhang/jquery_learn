@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //通过html的字符串方式添加节点,性能最高,会覆盖掉里面原有的标签
+            // $('#div1').html();
+            //$('#div1').html($('#div1').html()+'<a href="#">链接</a>');
+            $a = $('<a href="#">链接</a>');
+
+            //父元素添加子元素
+            // $('#div1').append($a);
+            //子元素添加到父元素
+            $a.appendTo($('#div1'));
+        })
+    </script>
+</head>
+<body>
+    <div id="div1">
+        <h1>这是一个h1元素</h1>
+    </div>
+</body>
+</html>

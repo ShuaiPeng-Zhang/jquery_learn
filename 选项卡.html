@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .btns input{
+            width: 100px;
+            height: 40px;
+            background: gray;
+            border: 0;
+        }
+        .btns .current{
+            background: gold;
+        }
+        .cons div{
+            width: 500px;
+            height: 300px;
+            background: gold;
+            display: none;
+            text-align: center;
+            line-height: 300px;
+            font-size: 30px;
+            margin-top: 3px;
+        }
+        .cons .active{
+            display: block;
+        }
+    </style>
+
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var $btn = $('.btns input');
+            var $div = $('.cons div');
+            // alert($btn.length);
+            $btn.click(function () {
+                //this指的是原生的this，他表示当前点击的对象
+                //siblings其他同级元素
+                $(this).addClass('current');
+                $(this).siblings().removeClass('current');
+
+                // alert($(this).index());获取索引值
+                $div.eq($(this).index()).addClass('active');
+                $div.eq($(this).index()).siblings().removeClass('active');
+            })
+
+        })
+
+    </script>
+</head>
+<body>
+    <div class="btns">
+        <input type="button" name="" value="01" class="current">
+        <input type="button" name="" value="02">
+        <input type="button" name="" value="03">
+    </div>
+    <div class="cons">
+        <div class="active">1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //focus 一般用来让input元素开始就获取焦点,只能一个地方获得焦点
+            $('#input01').focus();
+            $('#input01').blur(function () {
+                //获取input元素的value值用val()
+                var sVal = $(this).val();
+                alert(sVal);
+            });
+
+            $('#form1').submit(function () {
+                // alert('提交成功');
+                //阻止默认的提交行为
+                return false;
+            });
+        })
+    </script>
+</head>
+<body>
+    <form id="form1">
+        <input type="text" name="" id="input01">
+        <input type="text" name="" id="input02">
+        <input type="submit" name="" value="提交" id="sub">
+    </form>
+</body>
+</html>

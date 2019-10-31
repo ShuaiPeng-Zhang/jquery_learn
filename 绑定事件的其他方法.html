@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            // $('#btn').click(function () {
+            //     alert('click事件!');
+            // });
+
+            //鼠标点击或者移入的时候都执行绑定的函数
+            $('#btn').bind('click mouseover',function () {
+                alert('click事件!');
+                //解绑函数
+                $(this).unbind('mouseover');
+            });
+        })
+    </script>
+</head>
+<body>
+    <input type="button" name="" value="按钮" id="btn">
+</body>
+</html>

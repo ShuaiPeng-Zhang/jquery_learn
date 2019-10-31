@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var $btn = $('#btn');
+            $btn.click(function () {
+
+                // 可以简化成下面写法
+                // if ($('.box').hasClass('col01'))
+                // {
+                //     $('.box').removeClass('col01');
+                // }
+                // else{
+                //     $('.box').addClass('col01');
+                // }
+
+                $('.box').toggleClass('col01');
+            })
+        })
+    </script>
+
+    <style type="text/css">
+        .box{
+            width: 200px;
+            height: 200px;
+            background: gold;
+
+        }
+        .col01{
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" name="" value="切换样式" id="btn">
+    <div class="box">div元素</div>
+</body>
+</html>

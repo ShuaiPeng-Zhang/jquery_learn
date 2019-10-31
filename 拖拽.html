@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //拖拽
+            $('.box').draggable({
+                //限制在x轴滑动
+                axis:'x',
+                //限定在父级范围内拖动
+                containment:'parent',
+                //设置透明度
+                opacity:0.6,
+                
+                drag:function (ev,ui) {
+                    // console.log(ui);
+                    //获得拖动的距离
+                    document.title = ui.position.left;
+                    $('#shownumber').val(parseInt(ui.position.left/600*100));
+                }
+            });
+
+        })
+    </script>
+    <style type="text/css">
+        .con{
+            width: 800px;
+            height: 200px;
+            border: 1px solid gray;
+            margin: 50px auto 0;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background: gold;
+        }
+    </style>
+</head>
+<body>
+<div class="con">
+        <div class="box"></div>
+</div>
+<input type="text" name="" id="shownumber">
+</body>
+</html>
